@@ -1,0 +1,34 @@
+name: Bug report
+description: Report a reproducible lifecycle defect
+title: "bug: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Security issues must use private vulnerability reporting.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+    validations:
+      required: true
+  - type: dropdown
+    id: runtime
+    attributes:
+      label: Runtime
+      options: [Node.js, Bun, Deno, Browser, Worker or edge runtime, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Minimal reproduction
+      description: Include the terminal event ordering and expected registry state.
+    validations:
+      required: true
+  - type: textarea
+    id: behavior
+    attributes:
+      label: Actual and expected behavior
+    validations:
+      required: true
